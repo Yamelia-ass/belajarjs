@@ -1,0 +1,142 @@
+/* File: public/style.css (Ganti semua isinya dengan ini) */
+
+/* Reset dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif; /* Font baru yang lebih modern */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  
+  /* Latar belakang gradient yang menarik */
+  background: linear-gradient(120deg, #2980b9, #8e44ad);
+  color: #ffffff;
+  overflow: hidden; /* Mencegah scroll aneh */
+}
+
+/* --- KARTU LOGIN (EFEK KACA) --- */
+.login-card {
+  width: 400px;
+  padding: 40px 30px;
+  
+  /* Efek Kaca (Glassmorphism) */
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px); /* Untuk Safari */
+  
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  
+  /* Bayangan untuk efek 3D */
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+h2 {
+  text-align: center;
+  font-weight: 600;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+/* --- FORM INPUT --- */
+.input-group {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.input-group label {
+  position: absolute;
+  top: 14px;
+  left: 15px;
+  font-size: 0.9rem;
+  color: #eee;
+  background: transparent;
+  padding: 0 5px;
+  transition: all 0.2s ease;
+  pointer-events: none; /* Agar bisa klik input di bawahnya */
+}
+
+.input-group input {
+  width: 100%;
+  padding: 14px;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  font-size: 1rem;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Efek label naik saat input di-fokus atau di-isi */
+.input-group input:focus + label,
+.input-group input:valid + label { /* 'valid' akan aktif karena kita set 'value' */
+  top: -10px;
+  font-size: 0.8rem;
+  background: #34495e; /* Warna solid agar teks label terbaca */
+  border-radius: 4px;
+}
+
+/* --- TOMBOL LOGIN --- */
+button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  
+  /* Gradient untuk tombol */
+  background: linear-gradient(90deg, #007bff, #0056b3);
+  color: white;
+  
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  /* Efek sedikit terangkat dan bayangan */
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
+}
+
+button:disabled {
+  background: #777;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* --- AREA PESAN (Error & Sukses) --- */
+.message {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.message.error {
+  background: rgba(255, 77, 77, 0.2);
+  color: #ff4d4d;
+  border: 1px solid #ff4d4d;
+}
+
+.message.success {
+  background: rgba(40, 167, 69, 0.2);
+  color: #28a745;
+  border: 1px solid #28a745;
+  font-size: 1.1rem;
+}
+
+.hidden {
+  display: none; /* Sembunyikan elemen */
+}

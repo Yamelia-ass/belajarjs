@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel Login</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="login-card">
+    
+    <h2>Login</h2>
+    
+    <form id="loginForm">
+      
+      <div class="input-group">
+        <input type="text" id="username" value="admin" required>
+        <label for="username">Username</label>
+      </div>
+      
+      <div class="input-group">
+        <input type="password" id="password" value="admin123" required>
+        <label for="password">Password</label>
+      </div>
+      <button type="submit" id="loginButton">Login</button>
+    </form>
+    
+    <div id="errorMessage" class="message error hidden"></div>
+    <div id="reportResult" class="message success hidden"></div>
+
+  </main>
+
+  <script src="script.js" type="module"></script>
+</body>
+</html>
